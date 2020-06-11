@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background: #f7a343;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #0575E6;
+  background: linear-gradient(to right, #021B79, #0575E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: auto;
+  padding: 0px;
+  /*debe ser 48 para separarlo*/
+  width: 100%;
+}
+
+.menu {
+  display: block;
+  z-index: 1000;
+  animation: appear 2s ease-in;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav a {
+  color: #f5f5dc;
+  text-decoration: none;
+}
+
+.containerOne {
+  width: 96%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.nick {
+  display: block;
+  height: 450px;
+  width: auto;
+  animation: appear2 2s ease-in;
+}
+
+.eslogan {
+  height: 50%;
+  color: white;
+  animation: appear 2s ease-in;
+}
+
+.eslogan h1 {
+  font-size: 60px;
+}
+
+.eslogan h2 {
+  font-size: 30px;
+}
+
+/*el siguiente codigo me sirve para los botones de play store y appstore*/
+.botones {
+  display: inline-block;
+  color: #f5f5dc;
+  font-weight: 300;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  width: 160px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  animation: appear2 2s ease-in;
+}
+
+.openModal {
+  display: inline-block;
+  color: #f5f5dc;
+  font-weight: 300;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  width: 160px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  animation: appear2 2s ease-in;
+  cursor: pointer;
+}
+
+.wave {
+  height: 100px;
+  width: 100%;
+  background: #0575E6;
+  background: linear-gradient(to right, #021B79, #0575E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.links {
+  position: fixed;
+  display: flex;
+  top: 0;
+  background: black;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  transition: all 1s ease;
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.uno {
+  -webkit-clip-path: circle(0% at 0 0);
+  clip-path: circle(0% at 0 0);
+}
+
+.dos {
+  -webkit-clip-path: circle(150% at 0 0);
+  clip-path: circle(150% at 0 0);
+}
+
+
+/*este codigo me sirve para que aparezaca el banner y la frase desde la izquierda*/
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*este codigo es igual pero desde la derecha hacia el centro*/
+@keyframes appear2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*este codigo es para el slider show */
+#banner {
+  background-color: white;
+}
+
+.containerBanner {
+  background-color: white;
+  width: 100%;
+  border: 4px solid black;
+  overflow: hidden;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.titleBanner {
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16vh;
+}
+
+.titleBanner h1 {
+  font-size: 4.5vh;
+}
+
+.containerSlide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  border: 1px solid greenyellow;
+}
+
+.slideTitle,
+.slideText {
+  justify-content: start;
+  padding-left: 10%;
+}
+
+.slideTitle {
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+.slideTitle h2 {
+  font-size: 4vh;
+}
+
+.slideText {
+  border: 2px solid #492222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 70%;
+  padding-right: 10%;
+}
+
+.slideText p {
+  font-size: 2.5vh;
+}
+
+.slideImg {
+  background-color: #4ecdc4;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-evenly;
+}
+
+.containerImg,
+.slideText2 {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid red;
+}
+
+.slideText2 p {
+  text-align: center;
+  font-size: 2.5vh;
+  border: 2px solid green;
+  width: 20%;
+}
+
+.img {
+  height: 40%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  padding: 0;
+  color: black;
+  font-size: 5vh;
+  transition: 0.6s ease;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  font-size: 6vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 0.4em;
+  width: 0.4em;
+  margin: 0 2px;
+  background-color: #1adf1a;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot,
+.dot:hover {
+  background-color: black;
+}
+
+.containerButtonBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18vh;
+  width: 100%;
+}
+
+.buttonBanner {
+  background-color: #ffe66d;
+  border: 3px solid #f7fff7;
+  border-radius: 1vh;
+  color: black;
+  display: inline-block;
+  font-size: 2vh;
+  font-weight: bold;
+  min-height: 3vh;
+  padding: 2vh;
+  text-decoration: none;
+  text-align: center;
+  min-width: 30vh;
+  -webkit-animation: appear3 1s ease-in;
+  animation: appear3 1s ease-in;
+  outline: none;
+  padding: 2vh;
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  -ms-border-radius: 1vh;
+  -o-border-radius: 1vh;
+}
+
+.buttonBanner:hover {
+  background-color: #4ecdc4;
+}
+
+@media screen and (max-width:950px) {
+  .slideText2 p {
+    font-size: 2vh;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .slideText2 p {
+    width: 30%;
+  }
+
+  .img {
+    height: 30%;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .titleBanner h1 {
+    font-size: 2.5vh;
+  }
+
+  .slideTitle h2 {
+    font-size: 2.1vh;
+  }
+
+  .slideImg,
+  .slide {
+    height: 300px;
+    justify-content: none;
+  }
+
+  .slideText p,
+  .slideText2 p {
+    font-size: 1.3vh;
+  }
+
+  .img {
+    height: 20%;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .eslogan h1 {
+    font-size: 60px;
+  }
+
+  .eslogan h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width:700px) {
+
+  .eslogan h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .eslogan h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .eslogan a {
+    font-size: 16px;
+    width: 230px;
+    animation: appear 2s ease-in;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .containerOne {
+    width: 100%;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  img {
+    height: 250px;
+  }
+
+  .eslogan h1 {
+    font-size: 40px;
+  }
+
+  .eslogan h2 {
+    font-size: 16px;
+  }
+}
+
+.eslogan a {
+  margin-left: 46px;
+  width: 140px;
+}
+
+@media screen and (max-width:340px) {
+  img {
+    height: 160px;
+  }
+
+  .eslogan h1 {
+    font-size: 34px;
+  }
+
+  .eslogan h2 {
+    font-size: 12px;
+  }
+
+  .eslogan a {
+    margin-left: 46px;
+    width: 100px;
+  }
+}
